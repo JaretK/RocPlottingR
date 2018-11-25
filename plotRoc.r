@@ -59,12 +59,12 @@ if (file2!=""){
   csv_list[[2]] = csv2
 }
 csv_df = do.call("rbind", csv_list)
-mynamestheme <- theme(plot.title = element_text(family = "Arial", size = (20), hjust = 0.5),
-                      legend.title = element_text(family = "Arial", size = (10)),
-                      legend.text = element_text(family = "Arial", size = (10)),
+mynamestheme <- theme(plot.title = element_text(family = "Arial", size = (25), hjust = 0.5),
+                      legend.title = element_text(family = "Arial", size = (15)),
+                      legend.text = element_text(family = "Arial", size = (15)),
                       legend.position = "top",
-                      axis.title = element_text(family = "Arial", size = (10)),
-                      axis.text = element_text(family = "Arial", size = (8)))
+                      axis.title = element_text(family = "Arial", size = (15)),
+                      axis.text = element_text(family = "Arial", size = (13)))
 ggplot(csv_df, aes_string(x = X_variable, y = Y_variable, color = "Legend")) +
   geom_line() +
   ggpubr::theme_classic2() +
